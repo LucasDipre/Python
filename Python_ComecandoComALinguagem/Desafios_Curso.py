@@ -110,3 +110,8 @@ while(contador <= 10):
 # 3
 # 7
 # 9
+
+# i = 5 não vai funcionar pois será subescrito por conta do do proximo indice do range 
+for i in range(10):
+    print(i)
+    i = 5
