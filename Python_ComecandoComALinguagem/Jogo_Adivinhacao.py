@@ -3,23 +3,29 @@ print("Bem vindo no jogo de Adivinhação!")
 print("*********************************")
 
 numero_secreto = 42
+total_de_tentativas = 3
+rodada = 1
 
-chute_str = input("Digite o numero: ")
-#Se não for feita aqui a conversão para int sempre dará erro
-chute = int(chute_str)
+while (rodada <= total_de_tentativas):
+    print("Tentativa {} de {}:".format(rodada, total_de_tentativas))#Interpolação de String
 
-print("Você digitou ", chute_str)
+    chute_str = input("Digite o numero: ") #conversão não feita para int sempre dará erro
 
-acertou = chute == numero_secreto
-chute_foi_maior = chute > numero_secreto
-chute_foi_menor = chute < numero_secreto
+    chute = int(chute_str)
 
-if(acertou): 
-    print("Você acertou!")
-else:
-    if(chute_foi_maior):
-        print("Você errou! O seu numero foi maior do que o numero secreto!")
-    elif(chute_foi_menor):
-        print("Você errou! O seu numero foi menor do que o numero secreto!")
+    print("Você digitou ", chute_str)
 
-print("Fim do Jogo!")
+    acertou = chute == numero_secreto
+    chute_foi_maior = chute > numero_secreto
+    chute_foi_menor = chute < numero_secreto
+
+    if(acertou): 
+        print("Você acertou!")
+    else:
+        if(chute_foi_maior):
+            print("Você errou! O seu numero foi maior do que o numero secreto!")
+        elif(chute_foi_menor):
+            print("Você errou! O seu numero foi menor do que o numero secreto!")
+
+    rodada = rodada + 1
+    print("Fim do Jogo!")
