@@ -45,13 +45,19 @@ for rodada in range (1, total_de_tentativas + 1): # + 1 pois o segundo parametro
         print("Você acertou e fez {} pontos!".format(pontos))
         break  # sai do laço e não constinua o código até o fim do for
     else:
-        if(chute_foi_maior):
-            print("Você errou! O seu numero foi maior do que o numero secreto!")
-        elif(chute_foi_menor):
-            print("Você errou! O seu numero foi menor do que o numero secreto!")
         dano = abs(numero_secreto - chute) 
         pontos = pontos - dano
+        if(chute_foi_maior):
+            print("Você errou! O seu numero foi maior do que o numero secreto!")
+            if (rodada == total_de_tentativas):
+                print("O número secreto era {}. Você fez {}".format(numero_secreto, pontos))  
+        elif(chute_foi_menor):
+            print("Você errou! O seu numero foi menor do que o numero secreto!")
+            if (rodada == total_de_tentativas):
+                print("O número secreto era {}. Você fez {}".format(
+                    numero_secreto, pontos))
 
     rodada = rodada + 1
 
 print("Fim do Jogo!")
+
