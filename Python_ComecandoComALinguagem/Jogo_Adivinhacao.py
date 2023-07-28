@@ -1,10 +1,15 @@
+import random
+
 print("*********************************")
 print("Bem vindo no jogo de Adivinhação!")
 print("*********************************")
 
-numero_secreto = 42
+#Gera um numero randomico, arredonda e transforma em int
+numero_secreto = random.randrange(1, 101)
+
 total_de_tentativas = 3
 
+print(numero_secreto)
 
 for rodada in range (1, total_de_tentativas + 1): # + 1 pois o segundo parametro é exclusivo
     print("Tentativa {} de {}:".format(rodada, total_de_tentativas))#Interpolação de String
