@@ -61,3 +61,5 @@ print(dados_amz)
 
 #Gerando um .csv com os dadso do dataframe
 dados_amz.to_csv('amazon.csv')
+
+

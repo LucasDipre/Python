@@ -31,5 +31,15 @@ while True:
     # incrementa o valor de 'page' para a próxima requisição
     page += 1
 
-#print(len(followers_list))
-print(*followers_list)
+
+# criando uma lista vazia
+followers_name = []
+
+# # percorrendo a lista com os dados dos seguidores e selecionando apenas o nome de usuário
+# for page in followers_list:
+#     for follower in page:
+#         followers_name.append(follower['login'])
+
+# conferindo o tamanho da lista
+print(len(followers_name))
+
