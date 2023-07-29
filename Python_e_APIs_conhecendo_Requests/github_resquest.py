@@ -1,4 +1,5 @@
 import requests
+import pandas as pd
 
 # especificando a versão da API
 api_base_url = 'https://api.github.com'
@@ -20,9 +21,43 @@ for page_num in range(1, 6):
     except:
         repos_list.append(None)
 
-print(len(repos_list))
-print(len(repos_list[0]))
-print(len(repos_list[1]))
-print(len(repos_list[2]))
+repos_name = []
+for page in repos_list:
+    for repo in page:
+        repos_name.append(repo['name'])
 
+# [ # lista 
 
+#     [ # sublista 
+#         {repositorio_1}, # dicionários
+#         {repositorio_2}
+#     ],
+
+#     [ # sublista
+#         {repositorio_3}, # dicionarios
+#         {repositorio_4}
+#     ]
+
+# ]
+
+print(repos_list[1][1]['language'])
+
+repos_language = []
+for page in repos_list:
+    for repo in page:
+        repos_language.append(repo['name'])
+
+print(len(repos_language))
+print(repos_language)
+# print(len(repos_name))
+# print(repos_name)
+
+#Criando um dataframe  e criando duas colunas em uma tabela no dataframe
+dados_amz = pd.DataFrame()
+dados_amz['repository_name'] = repos_name
+dados_amz['language'] = repos_language
+
+print(dados_amz)
+
+#Gerando um .csv com os dadso do dataframe
+dados_amz.to_csv('amazon.csv')
