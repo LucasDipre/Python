@@ -1,0 +1,23 @@
+Marlon criou dois arquivos chamados a.py e b.py. Segue conteúdo de cada um:
+
+arquivo a.py
+print('executando a')
+
+# arquivo b.py
+print('executando b')
+
+Ele ainda criou um terceiro arquivo chamado principal.py. Para testar 
+se aprendeu corretamente a importar um módulo criado por ele mesmo, 
+ele fez o seguinte em principal.py
+
+principal.py
+
+import a
+import b
+
+O que acontecerá quando Marlon executar através do terminal o programa principal.py?
+
+Será exibido os textos:
+
+executando a
+executando b
