@@ -115,3 +115,7 @@ while(contador <= 10):
 for i in range(10):
     print(i)
     i = 5
+
+#Introdução do tipo bool
+existe = True
+type(existe)

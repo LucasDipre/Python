@@ -1,3 +1,4 @@
+#código que pega duas listas de strings e combina em um dicionário
 lista_de_compras = ['arroz', 'feijao', 'macarrao']
 preco_dos_itens = ['2.00', '3.80', '4.90']
 dict = {}
