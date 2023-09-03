@@ -1,4 +1,10 @@
-banana
+Banana
 morango
-melancia
-maca
+Melancia
+Maca
+Carambola
+Mexirica
+Uva
+Caja
+Graviola
+Amora
